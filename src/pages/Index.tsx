@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ClassSelector } from "@/components/ClassSelector";
+import { NavBar } from "@/components/NavBar";
 import { BiomeMap } from "@/components/BiomeMap";
 import { BiomeDetailPanel } from "@/components/BiomeDetailPanel";
 import { StudentSidebar } from "@/components/StudentSidebar";
@@ -17,9 +17,18 @@ const Index = () => {
     }
   };
 
+  const handleNavigate = (section: string) => {
+    console.log("Navigate to:", section);
+    // Handle navigation logic here
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <ClassSelector selectedClass={selectedClass} onClassChange={setSelectedClass} />
+      <NavBar 
+        selectedClass={selectedClass} 
+        onClassChange={setSelectedClass}
+        onNavigate={handleNavigate}
+      />
       
       <div className="flex-1 flex flex-col lg:flex-row">
         <main className="flex-1 overflow-y-auto">
