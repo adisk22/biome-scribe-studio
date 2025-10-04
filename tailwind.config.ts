@@ -57,46 +57,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        forest: {
-          DEFAULT: "hsl(var(--forest))",
-          light: "hsl(var(--forest-light))",
-        },
-        desert: {
-          DEFAULT: "hsl(var(--desert))",
-          light: "hsl(var(--desert-light))",
-        },
-        ocean: {
-          DEFAULT: "hsl(var(--ocean))",
-          light: "hsl(var(--ocean-light))",
-        },
-        tundra: {
-          DEFAULT: "hsl(var(--tundra))",
-          light: "hsl(var(--tundra-light))",
-        },
-        mountains: {
-          DEFAULT: "hsl(var(--mountains))",
-          light: "hsl(var(--mountains-light))",
-        },
-        success: "hsl(var(--success))",
-        warning: "hsl(var(--warning))",
-      },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-forest': 'var(--gradient-forest)',
-        'gradient-desert': 'var(--gradient-desert)',
-        'gradient-ocean': 'var(--gradient-ocean)',
-        'gradient-tundra': 'var(--gradient-tundra)',
-        'gradient-mountains': 'var(--gradient-mountains)',
-      },
-      boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-        'xl': 'var(--shadow-xl)',
-      },
-      transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
-        'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -120,30 +80,10 @@ export default {
             height: "0",
           },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.5" },
-        },
-        "slide-up": {
-          from: { transform: "translateY(20px)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
-        "scale-in": {
-          from: { transform: "scale(0.95)", opacity: "0" },
-          to: { transform: "scale(1)", opacity: "1" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "slide-up": "slide-up 0.3s ease-out",
-        "scale-in": "scale-in 0.2s ease-out",
       },
     },
   },

@@ -1,48 +1,12 @@
-import { useState } from "react";
-import { NavBar } from "@/components/NavBar";
-import { BiomeMap } from "@/components/BiomeMap";
-import { BiomeDetailPanel } from "@/components/BiomeDetailPanel";
-import { StudentSidebar } from "@/components/StudentSidebar";
-import { Biome } from "@/components/BiomeTile";
+// Update this page (the content is just a fallback if you fail to update the page)
 
 const Index = () => {
-  const [selectedClass, setSelectedClass] = useState("class-a");
-  const [selectedBiome, setSelectedBiome] = useState<Biome | null>(null);
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
-
-  const handleBiomeClick = (biome: Biome) => {
-    if (biome.unlocked) {
-      setSelectedBiome(biome);
-      setIsPanelOpen(true);
-    }
-  };
-
-  const handleNavigate = (section: string) => {
-    console.log("Navigate to:", section);
-    // Handle navigation logic here
-  };
-
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <NavBar 
-        selectedClass={selectedClass} 
-        onClassChange={setSelectedClass}
-        onNavigate={handleNavigate}
-      />
-      
-      <div className="flex-1 flex flex-col lg:flex-row">
-        <main className="flex-1 overflow-y-auto">
-          <BiomeMap onBiomeClick={handleBiomeClick} />
-        </main>
-        
-        <StudentSidebar />
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="text-center">
+        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
+        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
       </div>
-
-      <BiomeDetailPanel
-        biome={selectedBiome}
-        open={isPanelOpen}
-        onClose={() => setIsPanelOpen(false)}
-      />
     </div>
   );
 };
